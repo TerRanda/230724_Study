@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.thejoeun.practice1.boilerplate1.repository.mapper.MemberMapper">
+<!--    <select id="selectMember" parameterType="hashmap" resultType="com.thejoeun.practice1.boilerplate1.model.mapper.Member">-->
+    <select id="selectMember" parameterType="hashmap" resultType="Member">
+        SELECT
+            id,
+            email
+        FROM
+            member
+        WHERE
+            1=1
+        AND id = #{id}
+    </select>
+<!--    <select id="selectMemberList" parameterType="hashmap" resultType="com.thejoeun.practice1.boilerplate1.model.mapper.Member">-->
+    <select id="selectMemberList" parameterType="hashmap" resultType="Member">
+        SELECT
+            id,
+            email
+        FROM
+            member
+    </select>
+</mapper>

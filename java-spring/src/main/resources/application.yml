@@ -1,0 +1,59 @@
+server.port: 8090 #TOMCAT 서버포트 8090 설정
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 888436277772-p3nm5cgiuvefjvorn14n0rlp9dvdjqen.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+    user:
+      name: user
+      password: 1234
+  datasource:
+    url: jdbc:mariadb://localhost:3306/mydb         # mariadb
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: 1234
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  jpa:
+    show-sql: true # java코드로 짠 sql을
+    defer-datasource-initialization: true # data.sql 사용을 위해서 필수적으로 등록
+    properties:
+      hibernate:
+        format_sql: true  # sql문 pretty하게 보여줌
+        use_sql_comments: true
+    generate-ddl: true   # true, false
+    hibernate:
+      ddl-auto: create    # create, create-drop, update, validate, none
+        # create: spring boot처음 실행시에 Entity로 된 클래스 및 테이블을 drop하고 create함
+        # create-drop: spring boot처음 실행시에 Entity로 된 클래스 및 테이블을 drop하고 create하고 springboot종료시에 다시 drop
+      # update: 연결된 db schema와 자바 entity와 비교를 하여 다른 게 있다면 다른 것만 ddl 코드를 생성
+      # validate: ddl구문을 만들진 않고 연결된 db schema와 자바 entity와 비교를 하여 다른 게 있다면 오류코드만 보여줌
+      # none: ddl구문을 만들지 않음.
+  sql:
+    init:
+      mode: always
+      # always: embeded db가 아닌 외부 db 사용시 spring boot를 실행할때 마다 data.sql schema.sql import.sql을 항상 실행
+      # never: data.sql schema.sql import.sql을 실행하지 않음
+      encoding: utf-8
+  devtools:
+    livereload:
+      enabled: true
+
+mybatis:
+  mapper-locations: mybatis-mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#xml resultType 이름을 간단하게 쓰기 위해서 패키지 이름 적어놓음
+  type-aliases-package: com.thejoeun.practice1.boilerplate1.model
+
+jwt:
+  secret: 1234
