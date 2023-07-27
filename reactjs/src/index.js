@@ -9,8 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <HashRouter></HashRouter> */}
-    {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
-    <BrowserRouter basename='/230724_Study'>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    {/* <BrowserRouter basename='/230724_Study'> */}
       <App />
     </BrowserRouter>
   </React.StrictMode>
