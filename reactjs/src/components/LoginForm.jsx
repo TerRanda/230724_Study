@@ -8,7 +8,7 @@ function LoginForm () {
         <div className="card bg-dark" style={{borderRadius: '1rem'}}>
           <div className="card-body p-5 text-center">
             <h2 className="text-white">LOGIN</h2>
-            <p className="text-white-50 mt-2 mb-5">서비스를 사용하려면 로그인을 해주세요!</p>
+            <p className="text-white-50 mt-2 mb-5">서비스를 사용하려면 로그인을 해주세요!!!!</p>
             <div className="mb-2">
               <form action="/login" method="POST">
                 <div className="mb-3">
