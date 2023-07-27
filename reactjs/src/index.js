@@ -10,8 +10,7 @@ root.render(
   <React.StrictMode>
     {/* <HashRouter></HashRouter> */}
     {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
-    {/* <BrowserRouter basename='/react-basic' */}
-    <BrowserRouter>
+    <BrowserRouter basename='/230724_Study'>
       <App />
     </BrowserRouter>
   </React.StrictMode>
