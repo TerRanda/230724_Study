@@ -19,7 +19,7 @@ public class MybatisTest {
     @Test
     void mybatisTest1() {
         Map<String, Object> paramMap = new HashMap<>();
-        paramMap.put("id", 2L);
+        paramMap.put("id", 10L);
 
         Member member = memberMapper.selectMember((HashMap<String, Object>) paramMap);
         System.out.println("member 2 email: " + member.getEmail());

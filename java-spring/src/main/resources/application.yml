@@ -1,4 +1,4 @@
-server.port: 8090 #TOMCAT 서버포트 8090 설정
+server.port: 8080 #TOMCAT 서버포트 8090 설정
 
 spring:
   security:
@@ -15,8 +15,8 @@ spring:
       name: user
       password: 1234
   datasource:
-    url: jdbc:mariadb://thejoeun1.iptime.org::3310/mydb
-    #    url: jdbc:mariadb://localhost:3306/mydb         # mariadb
+    url: jdbc:mariadb://ec2-15-165-159-107.ap-northeast-2.compute.amazonaws.com/mydb
+#    url: jdbc:mariadb://localhost:3306/mydb         # mariadb
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: 1234
