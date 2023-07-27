@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "xcopy /Y .\\build\\* ..\\docs\\ /E",
+    "postbuild": "del /f /s /q ..\\docs\\** && xcopy /Y .\\build\\* ..\\docs\\ /E",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
