@@ -1,0 +1,15 @@
+- Backend API 명세
+http://localhost:8091/auth/signup   // 회원가입
+http://localhost:8091/auth/login   // 로그인(성공 응답시 jwt값과 jwt유효기간을 받음)
+http://localhost:8091/member/me   // 멤버 정보 요청(jwt값 필요)
+
+- Backend 배포(jar)
+AWS, GCP, Heroku, Qoddi, fly.io
+
+gradlew.bat clean build -> ./build/libs/jar파일 -> java -jar jar파일
+npx create-react-app reactjs
+npm install react-bootstrap bootstrap react-router-dom react-icons axios date-fns jquery @popperjs/core 
+npm install --save gh-pages
+npm run start
+
+https://github.com/pktjesus/boilerplate1-practice/tree/develop/frontend/react/practice2-react18
